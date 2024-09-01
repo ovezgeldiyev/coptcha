@@ -1,0 +1,122 @@
+.footer {
+  background-color: #000f1f;
+  padding: 80px 0;
+  color: #ebf5ff;
+  position: relative;
+  &__inner {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: start;
+      width: calc(50% - 100px);
+    }
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 152px;
+      margin-bottom: 16px;
+      img {
+        width: 100%;
+      }
+    }
+    &-terms {
+      width: calc(50% - 100px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: end;
+      h5 {
+        margin-bottom: 16px;
+      }
+    }
+    &-copy {
+      display: none;
+    }
+    .social {
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+// 930px
+@mixin footer-md-lg {
+  .footer {
+    padding: 50px 0;
+    &__inner {
+      &-main {
+        width: calc(60% - 10px);
+      }
+      &-terms {
+        width: calc(40% - 10px);
+      }
+      .social {
+        display: none;
+      }
+    }
+  }
+}
+// 750px
+@mixin footer-sm-md {
+  .footer {
+  }
+}
+// 650px
+@mixin footer-sm-md-extra {
+  .footer {
+  }
+}
+// 540px
+@mixin footer-xsm-sm {
+  .footer {
+    padding: 40px 0;
+    &__inner {
+      &-row {
+        flex-direction: column;
+      }
+      &-main {
+        width: 100%;
+        max-width: unset;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 24px;
+        p {
+          display: none;
+        }
+      }
+      &-logo {
+        margin: 0;
+      }
+      &-terms {
+        width: 100%;
+        max-width: unset;
+        text-align: center;
+        align-items: center;
+        padding: 30px 0;
+        h5 {
+          margin-bottom: 6px;
+        }
+      }
+      &-copy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .social {
+        display: flex;
+      }
+    }
+  }
+}
+// 390px
+@mixin footer-xxxsm-xxsm {
+  .footer {
+  }
+}

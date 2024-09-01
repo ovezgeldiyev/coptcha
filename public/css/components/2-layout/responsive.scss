@@ -1,0 +1,229 @@
+// 1750px
+@include xxxxxxlg-xxxxxxxlg {
+  @include dash-xxxxxxlg-xxxxxxxlg;
+}
+// 1600px
+@include xxxxxlg-xxxxxxlg {
+  @include intro-xxxxxlg-xxxxxxlg;
+  @include dash-xxxxxlg-xxxxxxlg;
+}
+// 1450px
+@include xxxxlg-xxxxxlg {
+  h1 {
+    font-size: 60px;
+  }
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  h1 {
+    font-size: 55px;
+  }
+  @include hero-xxxlg-xxxxlg;
+  @include intro-xxxlg-xxxxlg;
+  @include dash-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include hero-xlg-xxlg-extra;
+  @include sidebar-xlg-xxlg-extra;
+  @include dash-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+  h4 {
+    font-size: 25px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  p {
+    &.big {
+      font-size: 18px;
+    }
+    &.sm {
+      font-size: 14px;
+      line-height: 164%;
+    }
+  }
+  body {
+    font-size: 16px;
+    line-height: 164%;
+  }
+  .button {
+    font-size: 14px;
+    padding: 15px 30px;
+    &.big {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 16px 30px;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 6px;
+    }
+  }
+  @include hero-xlg-xxlg;
+  @include solver-xlg-xxlg;
+  @include info-xlg-xxlg;
+  @include speak-xlg-xxlg;
+  @include join-xlg-xxlg;
+  @include service-xlg-xxlg;
+  @include pricing-xlg-xxlg;
+  @include sidebar-xlg-xxlg;
+  @include dash-xlg-xxlg;
+
+  // login
+  @include intro-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  .wrapper {
+    padding-top: 71.58px;
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+
+  // login
+  @include intro-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  @include hero-md-lg;
+  @include info-md-lg;
+  @include footer-md-lg;
+  @include dash-md-lg;
+}
+// 840px
+@include md-lg-extra {
+  @include hero-md-lg-extra;
+  @include solver-md-lg-extra;
+  @include service-md-lg-extra;
+  @include speak-md-lg-extra;
+  @include join-md-lg-extra;
+  @include pricing-md-lg-extra;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  @include hero-sm-md;
+
+  // login
+  @include intro-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  @include hero-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 27px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    &.big {
+      font-size: 16px;
+    }
+  }
+  .button {
+    &.big {
+      font-size: 14px;
+      padding: 12px 20px;
+    }
+  }
+  .check {
+    p {
+      font-size: 14px;
+    }
+  }
+  .input {
+    input {
+      font-size: 14px;
+      padding: 14px 16px;
+    }
+  }
+  .popup {
+    &__inner {
+      padding: 25px 20px;
+      &-head {
+        margin-bottom: 24px;
+      }
+      &-content {
+        margin-bottom: 50px;
+        p {
+          margin-bottom: 16px;
+        }
+      }
+      h5 {
+        font-size: 18px;
+      }
+    }
+  }
+  @include hero-xsm-sm;
+  @include solver-xsm-sm;
+  @include info-xsm-sm;
+  @include footer-xsm-sm;
+
+  // login
+  @include intro-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include hero-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include hero-xxxsm-xxsm;
+}

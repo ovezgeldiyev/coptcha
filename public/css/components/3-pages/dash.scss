@@ -1,0 +1,347 @@
+.dash {
+  background-color: #f4f5f7;
+  &Main {
+    width: calc(100% - 503px);
+    margin: 0 0 0 auto;
+    min-height: 100vh;
+    &__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+      border-bottom: 1px solid #dfe1e6;
+    }
+    &__logo {
+      width: 153px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    &__body {
+      padding: 100px 60px;
+      &-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+      }
+    }
+  }
+  &Item {
+    margin: 10px;
+    width: calc(33.3% - 20px);
+    padding: 55px;
+    background-color: $white;
+    background: #fafbfc;
+    display: flex;
+    flex-direction: column;
+    &__price {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 132%;
+      letter-spacing: -0.02em;
+      color: $main;
+      margin-bottom: 88px;
+      white-space: nowrap;
+      &.active {
+        color: $primary;
+      }
+      b {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 132%;
+      }
+    }
+    &__key {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 132%;
+      letter-spacing: -0.02em;
+      color: $gray;
+      height: 90px;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      &.hidden {
+        span {
+          opacity: 1;
+        }
+      }
+    }
+    &__foot {
+      margin: auto 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      &.big {
+        .button {
+          width: 100%;
+        }
+      }
+      .button {
+        width: calc(50% - 5px);
+      }
+    }
+    h6 {
+      font-weight: 600;
+      color: $gray;
+      margin-bottom: 16px;
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(19, 19, 19, 0.12);
+      backdrop-filter: blur(8px);
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+  }
+}
+// 1750px
+@mixin dash-xxxxxxlg-xxxxxxxlg {
+  .dash {
+    &Main {
+      width: calc(100% - 400px);
+      &__head {
+        padding: 30px;
+      }
+      &__body {
+        padding: 70px 30px;
+      }
+    }
+    &Item {
+      padding: 40px;
+      &__price {
+        margin-bottom: 60px;
+        font-size: 45px;
+        b {
+          font-size: 38px;
+        }
+      }
+      &__key {
+        font-size: 38px;
+        height: 70px;
+      }
+    }
+  }
+  .sidebar {
+    width: 400px;
+    &__body {
+      padding: 140px 30px;
+    }
+    &__foot {
+      padding: 30px 30px 40px 30px;
+    }
+  }
+}
+// 1600px
+@mixin dash-xxxxxlg-xxxxxxlg {
+  .dash {
+    &Main {
+      width: calc(100% - 400px);
+      &__head {
+        padding: 20px 30px;
+      }
+      &__body {
+        padding: 50px 30px;
+        &-row {
+          margin: 0 -6px;
+        }
+      }
+    }
+    &Item {
+      padding: 30px;
+      margin: 6px;
+      width: calc(33.3% - 12px);
+      &__price {
+        font-size: 38px;
+        b {
+          font-size: 28px;
+        }
+      }
+      &__key {
+        font-size: 28px;
+        height: 65px;
+      }
+    }
+  }
+}
+// 1380px
+@mixin dash-xxxlg-xxxxlg {
+  .dash {
+    &Item {
+      padding: 20px;
+    }
+    &Main {
+      width: calc(100% - 340px);
+      &__head {
+        padding: 20px;
+      }
+      &__body {
+        padding: 40px 20px;
+      }
+    }
+    .sidebar {
+      width: 340px;
+      &__body {
+        padding: 120px 20px;
+      }
+      &__foot {
+        padding: 20px 20px 30px 20px;
+      }
+    }
+  }
+}
+// 1250px
+@mixin dash-xlg-xxlg-extra {
+  .dash {
+    &Main {
+      width: calc(100% - 300px);
+    }
+    .sidebar {
+      width: 300px;
+      &__body {
+        padding: 80px 12px;
+      }
+      &__foot {
+        padding: 20px 12px 30px 12px;
+      }
+    }
+  }
+}
+// 1180px
+@mixin dash-xlg-xxlg {
+  .dash {
+    &Main {
+      width: 100%;
+      &__head {
+        h5 {
+          display: none;
+        }
+      }
+    }
+    .burger {
+      display: block;
+      cursor: pointer;
+      @include transition;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      &:hover {
+        opacity: 0.8;
+      }
+      &::before {
+        top: 15%;
+        width: 100%;
+        height: 4px;
+        background-color: $primary;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        content: "";
+        position: absolute;
+        left: 50%;
+        @include transformX;
+      }
+      span {
+        top: 50%;
+        width: 100%;
+        height: 4px;
+        background-color: $primary;
+        pointer-events: none;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        position: absolute;
+        left: 50%;
+        @include transform;
+        @include transition;
+      }
+      &::after {
+        bottom: 15%;
+        width: 100%;
+        height: 4px;
+        background-color: $primary;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        content: "";
+        position: absolute;
+        left: 50%;
+        @include transformX;
+      }
+      &.active {
+        &::before {
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        span {
+          opacity: 0;
+        }
+        &::after {
+          bottom: 50%;
+          -webkit-transform: translate(-50%, 50%) rotate(-45deg);
+          transform: translate(-50%, 50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin dash-lg-xlg {
+  .dash {
+  }
+}
+// 930px
+@mixin dash-md-lg {
+  .dash {
+    &Main {
+      &__body {
+        padding: 20px;
+        &-row {
+          flex-direction: column;
+          margin: 0;
+        }
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 20px 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &__foot {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+// 840px
+@mixin dash-md-lg-extra {
+  .dash {
+  }
+}
+// 750px
+@mixin dash-sm-md {
+  .dash {
+  }
+}
+// 650px
+@mixin dash-sm-md-extra {
+  .dash {
+  }
+}
+// 540px
+@mixin dash-xsm-sm {
+  .dash {
+  }
+}
